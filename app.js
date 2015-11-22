@@ -1,9 +1,12 @@
 var express = require('express');
 var app = express();
+
 require('dotenv').load();
 app.set('view engine', 'jade');
+app.use(express.static('public'));
 
 app.get('/', function (req, res) {
+  // NOTE: In Node.js, __dirname is always the directory in which the currently executing script resides.
   res.render(__dirname + '/public/views/heat_map.jade',
     { apiKey: process.env.api_key}
   )

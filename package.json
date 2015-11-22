@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "batch_files\\start.bat"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "dotenv": "^1.2.0",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "jquery": "^2.1.4"
   }
 }
