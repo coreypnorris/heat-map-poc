@@ -1,6 +1,6 @@
-(function ($, Data, undefined) {
-  Data.zip_to_lat_lng = function() {
-    return [{'00601':{'lat':18.180555,'lng':-66.749961},
+(function ($, App, undefined) {
+  App.zip_to_lat_lng = function() {
+    return {'00601':{'lat':18.180555,'lng':-66.749961},
 	'00602':{'lat':18.361945,'lng':-67.175597},
 	'00603':{'lat':18.455183,'lng':-67.119887},
 	'00606':{'lat':18.158345,'lng':-66.932911},
@@ -33143,9 +33143,9 @@
 	'99925':{'lat':55.550204,'lng':-132.945933},
 	'99926':{'lat':55.138352,'lng':-131.470424},
 	'99927':{'lat':56.239062,'lng':-133.457924},
-	'99929':{'lat':56.370751,'lng':-131.69330}}]
+	'99929':{'lat':56.370751,'lng':-131.69330}}
   };
   
-}(jQuery, window.Data = window.Data || {}));
+}(jQuery, window.App = window.App || {}));
 
 

@@ -1,6 +1,6 @@
 // TODO: import data from another file
 
-var map, heatmap;
+var map, heatmap, rexelZips, rexelLatLngs;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -9,8 +9,25 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.SATELLITE
   });
 
+  rexelZips = App.rexel_zips();
+  zipToLatLng = App.zip_to_lat_lng();
+  rexelLatLngs = [];
+  nulls = [];
+  
+  var arrayLength = rexelZips.length;
+  for (var i = 0; i < arrayLength; i++) {
+    var subString = rexelZips[i].substring(0, 5);
+    var latLng = zipToLatLng[subString];
+    if (typeof latLng === "undefined") {
+      nulls.push(i);
+    }
+    else {
+      rexelLatLngs.push(new google.maps.LatLng(latLng.lat, latLng.lng));
+    }
+  }
+
   heatmap = new google.maps.visualization.HeatmapLayer({
-    data: Data.heat_map_test_data(),
+    data: rexelLatLngs,
     map: map
   });
 }

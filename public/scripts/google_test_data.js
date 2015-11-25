@@ -1,5 +1,5 @@
-(function ($, Data, undefined) {
-  Data.heat_map_test_data = function() {
+(function ($, App, undefined) {
+  App.google_test_data = function() {
     return [
       new google.maps.LatLng(37.782551, -122.445368),
       new google.maps.LatLng(37.782745, -122.444586),
@@ -504,10 +504,4 @@
     ];
   };
   
-}(jQuery, window.Data = window.Data || {}));
-
-// MyObject.sayStuff();
-// MyObject.sayStuff();
-// MyObject.publicFunction();
-// MyObject.privateFunction(); // Returns error
-// privateFunction(); // Returns error
+}(jQuery, window.App = window.App || {}));
